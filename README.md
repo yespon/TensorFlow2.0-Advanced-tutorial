@@ -6,7 +6,7 @@
 
 ## Requirements
 
- TODO
+TODO
 
 ## 架构设计
 
@@ -21,7 +21,7 @@
 
 ### 训练框架
 
-我们需要着重看的是TensorFlow训练部分的框架设计，因为这事我们经常接触到的：
+我们需要着重看的是TensorFlow训练部分的框架设计，因为这是我们经常接触到的：
 
 <img src="https://flyman-cjb.oss-cn-hangzhou.aliyuncs.com/picgos/20190406163445.png" width="500" height="高度" alt="图片名称" align=center>
 
@@ -63,7 +63,25 @@
 
 <img src="https://flyman-cjb.oss-cn-hangzhou.aliyuncs.com/picgos/20190406174841.png" width="宽度" height="高度" alt="图片名称" align=center>
 
-我们需要将其部署到不同的环境下。主要是服务器、移动端、浏览器这些环境下。
+TensorFlow始终为生产提供了直接部署方式。无论是部署在服务器、边缘设备还是Web上，TensorFlow都可以让用户对模型实现轻松训练和部署。无论用户使用何种语言或平台。在TensorFlow 2.0中，我们通过标准化互换格式和API对齐来提高跨平台和组件的兼容性。
+
+训练并保存模型后，可以直接在应用程序中执行，也可以使用其中一个部署库为其提供服务：
+
+- **TensorFlow服务**
+
+  TensorFlow库，允许通过HTTP / REST或gRPC /协议缓冲区提供模型。
+
+- **TensorFlow Lite**
+
+  TensorFlow针对移动和嵌入式设备的轻量级解决方案提供了在Android，iOS和嵌入式系统（如Raspberry Pi和Edge TPU）上部署模型的功能。
+
+- **TensorFlow.js**
+
+  允许在JavaScript环境下部署模型，如在Web浏览器或服务器端通过Node.js实现部署。TensorFlow.js还支持使用类似Keras的API在JavaScript中定义模型并直接在Web浏览器中进行训练。
+
+TensorFlow还支持其他语言，包括C，Java，Go，C＃，Rust，Julia，R等。
+
+
 
 ## 教程目录
 
@@ -79,3 +97,4 @@
  
 
 ### 部署
+
